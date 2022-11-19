@@ -13,16 +13,23 @@ ordered - одиниць товару в замовленні
 
 function checkStorage(available, ordered) {
     let message;
-
+    if (ordered > available) {
+        message = 'Not enough goods in stock!';
+    } else {
+        message = 'Order is processed, our manager will contact you.';
+    }
     return message;
 }
 
 // ПЕРЕВІРКА
 
-let var1 = null;
-let var2 = null;
-let var3 = null;
+let var1 = 41;
+let var2 = 51;
+let var3 = 51;
+let var4 = 51;
+let var5 = 61;
+let var6 = 51;
 
-console.log(checkAge(var1));
-console.log(checkAge(var2));
-console.log(checkAge(var3));
+console.log(checkStorage(var1, var2));
+console.log(checkStorage(var3, var4));
+console.log(checkStorage(var5, var6));
