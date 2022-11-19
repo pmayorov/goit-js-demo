@@ -1,28 +1,27 @@
 /* ЗАВДАННЯ #16
 
-Додай вираз перевірки повноліття користувача, значення параметра age, в умову для інструкції if.
+Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
 
-Якщо користувач повнолітній, повинен виконуватися блок if і у змінну message записується рядок "You are an adult".
-В іншому випадку повинен виконуватися блок else і записується рядок "You are a minor". 
+available - загальна кількість товарів на складі
+ordered - одиниць товару в замовленні
+Використовуючи розгалуження, доповни код функції таким чином, що:
+
+Якщо в замовленні вказане число, яке перевищує кількість товарів на складі, у змінну message записується рядок "Not enough goods in stock!".
+В іншому випадку записується рядок "Order is processed, our manager will contact you.".
 
 */
 
-function checkAge(age) {
+function checkStorage(available, ordered) {
     let message;
-    if (age >= 18) { // Change this line
-        message = 'You are an adult';
-    } else {
-        message = 'You are a minor';
-    }
+
     return message;
 }
 
-
 // ПЕРЕВІРКА
 
-let var1 = 17;
-let var2 = 18;
-let var3 = 20;
+let var1 = null;
+let var2 = null;
+let var3 = null;
 
 console.log(checkAge(var1));
 console.log(checkAge(var2));
