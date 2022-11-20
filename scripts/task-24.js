@@ -19,23 +19,29 @@ function getDiscount(totalSpent) {
     const SILVER_DISCOUNT = 0.05;
     const GOLD_DISCOUNT = 0.1;
     let discount;
-    // Change code below this line
-
-    // Change code above this line
+    if (totalSpent >= 50000) {
+        discount = GOLD_DISCOUNT
+    } else if (totalSpent >= 20000) {
+        discount = SILVER_DISCOUNT
+    } else if (totalSpent >= 5000) {
+        discount = BRONZE_DISCOUNT
+    } else {
+        discount = BASE_DISCOUNT
+    }
     return discount;
 }
 
 // ПЕРЕВІРКА
 
-let var1 = 5;
-let var2 = 20;
-let var3 = 2;
-let var4 = 10;
-let var5 = 21;
+let var1 = 137000;
+let var2 = 30000;
+let var3 = 10000;
+let var4 = 100000;
 
-console.log(isNumberNotInRange(var1, var2, var3));
-console.log(isNumberNotInRange(var1, var2, var4));
-console.log(isNumberNotInRange(var1, var2, var5));
+console.log(getDiscount(var1));
+console.log(getDiscount(var2));
+console.log(getDiscount(var3));
+console.log(getDiscount(var4));
 
 
 // Task 24-th - OK!
