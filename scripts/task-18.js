@@ -42,4 +42,4 @@ console.log(makeTransaction(var1, var2, var3));
 console.log(makeTransaction(var1, var2, var4));
 console.log(makeTransaction(var1, var2, var5));
 
-// Task 18-th - OK!!!
+// Task 18-th - OK!
